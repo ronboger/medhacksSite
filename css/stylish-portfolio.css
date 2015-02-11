@@ -238,5 +238,6 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    background-color: #efefef;
+    padding: 20px;
 }
