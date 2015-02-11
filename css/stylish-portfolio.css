@@ -156,7 +156,7 @@ hr.small {
     background-color: #000000;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.png) no-repeat center center scroll;
+    background: url(../img/webbg.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -167,6 +167,7 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    background-color: #efefef;
 }
 
 /* Services */
