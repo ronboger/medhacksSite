@@ -2,8 +2,7 @@
 
 Todo
 ======
-1. Hosting from the ACM
-2. Make Email registration functional (ie a backend and a PHP call) and the email entering and submission on the same line
-3. Make cover photo be more responsive at different sizes
-4. Find better font scheme for either logo or website
-5. Find a way to use the font primetime as text so the front page image doesn't have the text from the image
+1. Hosting from the ACM (done but need to switch over)
+2. Make cover photo be more responsive at different sizes
+3. Find better font scheme for either logo or website
+4. Find a way to use the font primetime as text so the front page image doesn't have the text from the image
