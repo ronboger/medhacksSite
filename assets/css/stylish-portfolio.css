@@ -90,7 +90,10 @@ hr.small {
     padding: 0;
     list-style: none;
 }
-
+.descr-title {
+    color: rgb(2, 116, 165);
+    margin-bottom: 40px;
+}
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -167,7 +170,7 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 120px 100px;
     background-color: #efefef;
 }
 
@@ -188,7 +191,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/microarray.png) no-repeat center center scroll;
+    background: url(../img/tissue-fractal-Proscia.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -217,6 +220,7 @@ hr.small {
 
 .call-to-action {
     padding: 50px 0;
+    background-color: #626262;
 }
 
 .call-to-action .btn {
@@ -238,6 +242,7 @@ hr.small {
 /* Footer */
 
 footer {
-    background-color: #efefef;
+    /*background: url('http://i.cdn.turner.com/cnn/.e/img/3.0/branding/backgrounds/section_bg_tech_large.jpg');*/
     padding: 20px;
+    background-position: center;
 }

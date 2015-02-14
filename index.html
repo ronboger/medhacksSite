@@ -35,7 +35,7 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <!--   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -52,7 +52,7 @@
                 <a href="#receiveup">Receive Updates</a>
             </li> -->
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- Header -->
     <header id="top" class="header">
@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Johns Hopkins's First Student Run Biotech Hackathon</h2>
+                    <h1 class="descr-title">Johns Hopkins's Medical and Biotech Hackathon</h1>
                     <p class="lead">
                         MedHacks is our answer to the slow, cumbersome monolith that is medical innovation. Traditional hackathons are the pinnacle of the software innovation movement that every industry has been trying to replicate. They embody rapid prototyping, collaboration, interdisciplinary work, and the perfect blend between science and entrepreneurship. </p>
                     <p class="lead"> We want to do the same with MedHacks, where we bring together the top minds in medicine and engineering in the country for 36 hours of shameless innovation. Hackers across all disciplines will unite to meet with the experts in every part of the medical field here at Johns Hopkins to develop their solutions to healthcare problems across the globe. At the end of the event, teams will have the opportunity to present their projects. Winners will be chosen by a board of judges.
@@ -91,15 +91,16 @@
     </aside>
 
     <!-- Call to Action -->
-    <!-- <aside id = "receiveup" class="call-to-action bg-primary">
+    <aside id = "receiveup" class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Receive Updates</h3>
-                    <form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    <form id="signup" method="POST" action="https://script.google.com/macros/s/AKfycbzBdV3TiTN9GWk8RHJ3brT2PsQNj8gU83wVFu-6b_MDOqhXRdg/exec" target="hidden_iframe">
                         <div>
                             <label class="sr-only" for="InputEmail">Email Address</label>
-                            <input type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>    
+                            <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>    
                         </div>
                         <button type="submit" class="btn btn-lg btn-light">Submit</button>
                     </form>
@@ -107,7 +108,7 @@
                 </div>
             </div>
         </div>
-    </aside> -->
+    </aside>
 
     <!-- Map -->
     <!-- <section id="contact" class="map">
