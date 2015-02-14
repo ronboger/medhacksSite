@@ -92,6 +92,7 @@ hr.small {
 }
 .descr-title {
     color: rgb(2, 116, 165);
+    margin-bottom: 40px;
 }
 .sidebar-nav li {
     text-indent: 20px;
@@ -169,7 +170,7 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 120px 100px;
     background-color: #efefef;
 }
 
@@ -240,6 +241,7 @@ hr.small {
 /* Footer */
 
 footer {
-    background-color: #efefef;
+    /*background: url('http://i.cdn.turner.com/cnn/.e/img/3.0/branding/backgrounds/section_bg_tech_large.jpg');*/
     padding: 20px;
+    background-position: center;
 }
