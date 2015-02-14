@@ -102,7 +102,7 @@
                             <label class="sr-only" for="InputEmail">Email Address</label>
                             <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>    
                         </div>
-                        <button type="submit" class="btn btn-lg btn-light">Submit</button>
+                        <button id="submit" type="submit" class="btn btn-lg btn-light">Submit</button>
                     </form>
                     
                 </div>
@@ -160,6 +160,14 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
+
+
+    $("#submit").click(function(e) {
+        $("#InputEmail").reset();
+        alert("Thank you!");
+    })
+    
+
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
@@ -187,6 +195,7 @@
                 }
             }
         });
+        
     });
     </script>
 
