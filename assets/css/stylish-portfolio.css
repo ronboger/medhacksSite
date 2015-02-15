@@ -234,9 +234,18 @@ hr.small {
 
 /* Map */
 
+.daMap {
+    float: left;
+    width: 50%;
+}
+
 .map {
     height: 500px;
+    width: 100%;
     overflow: hidden;
+    margin: 60px 0;
+    padding: 10px 10px 10px 80px;
+    float: left;
 }
 
 @media(max-width:768px) {
@@ -247,7 +256,10 @@ hr.small {
 
 .address {
     float: right;
-    margin: 10px auto 10px auto;
+    margin: 20px auto 20px auto;
+    top: 50%;
+    position: relative;
+    width: 20%;
 }
 
 /* Footer */
