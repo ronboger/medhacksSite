@@ -227,16 +227,27 @@ hr.small {
     margin: 10px;
 }
 
+.signup-form {
+    width: 50%;
+    margin: 10px auto 10px auto;
+}
+
 /* Map */
 
 .map {
     height: 500px;
+    overflow: hidden;
 }
 
 @media(max-width:768px) {
     .map {
         height: 75%;
     }
+}
+
+.address {
+    float: right;
+    margin: 10px auto 10px auto;
 }
 
 /* Footer */
