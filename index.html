@@ -90,9 +90,10 @@
                 <form id="signup" method="POST" action="https://script.google.com/macros/s/AKfycbzBdV3TiTN9GWk8RHJ3brT2PsQNj8gU83wVFu-6b_MDOqhXRdg/exec" target="hidden_iframe">
                     <div class="signup-form">
                         <label class="sr-only" for="InputEmail">Email Address</label>
-                        <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>    
+                        <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>
+                        <p id="thanks" style="display: none;margin-top: 10px;font-size: 18px;color: #FFF200;">Thanks! We'll send you updates as they come.</p>   
                     </div>
-                    <button type="submit" class="btn btn-lg btn-light">Submit</button>
+                    <button id="submit" type="submit" class="btn btn-lg btn-light">Submit</button>
                 </form>
         </div>
 
@@ -189,8 +190,8 @@
 
 
     $("#submit").click(function() {
-        $("#InputEmail").reset();
-        alert("Thank you!");
+        $("#InputEmail")[0].value = '';
+        $("#thanks")[0].style.display = 'block';  
     })
     
 
