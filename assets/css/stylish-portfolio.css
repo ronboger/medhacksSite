@@ -90,7 +90,10 @@ hr.small {
     padding: 0;
     list-style: none;
 }
-
+.descr-title {
+    color: rgb(2, 116, 165);
+    margin-bottom: 40px;
+}
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -167,7 +170,7 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 120px 100px;
     background-color: #efefef;
 }
 
@@ -188,7 +191,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/microarray.png) no-repeat center center scroll;
+    background: url(../img/tissue-fractal-Proscia.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -217,16 +220,34 @@ hr.small {
 
 .call-to-action {
     padding: 50px 0;
+    background-color: #626262;
 }
 
 .call-to-action .btn {
     margin: 10px;
 }
 
+.signup-form {
+    width: 50%;
+    margin: 10px auto 10px auto;
+}
+
 /* Map */
 
+.daMap {
+    /*float: left;*/
+    width: 50%;
+}
+
 .map {
-    height: 500px;
+    height: 600px;
+    width: 600px;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px auto 0 auto;
+    display: block;
 }
 
 @media(max-width:768px) {
@@ -235,9 +256,41 @@ hr.small {
     }
 }
 
+.address {
+    float: right;
+    margin: 20px auto 20px auto;
+    top: 50%;
+    position: relative;
+    width: 20%;
+}
+
+.hosted-by {
+    width: 600px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    float: center;
+    /*position: absolute;*/
+    border: 1px solid black;
+}
+
 /* Footer */
 
 footer {
-    background-color: #efefef;
-    padding: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(17, 89, 115, 0.12)), url('../img/general-surgery.jpg');
+    padding-top: 500px;
+    /*background-position: center;*/
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
+
+
+
+
+
+
+

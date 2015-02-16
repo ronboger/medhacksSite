@@ -35,7 +35,7 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <!-- <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -50,9 +50,9 @@
             </li>
             <li>
                 <a href="#receiveup">Receive Updates</a>
-            </li>
+            </li> 
         </ul>
-    </nav>
+    </nav>  -->
 
     <!-- Header -->
     <header id="top" class="header">
@@ -68,10 +68,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Johns Hopkins's First Student Run Biotech Hackathon</h2>
-                    <p class="lead">
-                        MedHacks is our answer to the slow, cumbersome monolith that is medical innovation. Traditional hackathons are the pinnacle of the software innovation movement that every industry has been trying to replicate. They embody rapid prototyping, collaboration, interdisciplinary work, and the perfect blend between science and entrepreneurship. </p>
-                    <p class="lead"> We want to do the same with MedHacks, where we bring together the top minds in medicine and engineering in the country for 36 hours of shameless innovation. Hackers across all disciplines will unite to meet with the experts in every part of the medical field here at Johns Hopkins to develop their solutions to healthcare problems across the globe. At the end of the event, teams will have the opportunity to present their projects. Winners will be chosen by a board of judges.
+                    <h1 class="descr-title">Johns Hopkins's Medical and Biotech Hackathon</h1>
+                    <p class="lead"> What if the most creative minds channeled their focus into solving the most impactful problems of today? Imagine if we could apply the ingenuity that powers the most profound technology into the deepest of all human concerns: health. MedHacks is the start. Join us for the first ever medical hackathon at the world’s pinnacle of medical care, Johns Hopkins University. </p>
+                    <p class="lead"> At MedHacks 2015, we're selecting the top young technologists, scientists, and engineers to build amazing things together. Hackers across all disciplines will unite to meet with the experts in every part of the medical field here at Johns Hopkins to develop their solutions to healthcare problems across the globe. At the end of the event, teams will have the opportunity to present their projects. Winners will be chosen by a board of judges.
 
                     </p>
 
@@ -86,22 +85,33 @@
     <aside class="callout">
         <div class="text-vertical-center">
             <h1>Coming Soon - Stay Tuned</h1>
+            <!-- <h3>Receive Updates</h3> -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                <form id="signup" method="POST" action="https://script.google.com/macros/s/AKfycbzBdV3TiTN9GWk8RHJ3brT2PsQNj8gU83wVFu-6b_MDOqhXRdg/exec" target="hidden_iframe">
+                    <div class="signup-form">
+                        <label class="sr-only" for="InputEmail">Email Address</label>
+                        <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>
+                        <p id="thanks" style="display: none;margin-top: 10px;font-size: 18px;color: #FFF200;">Thanks! We'll send you updates as they come.</p>   
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-lg btn-light">Submit</button>
+                </form>
         </div>
 
     </aside>
 
     <!-- Call to Action -->
-    <!-- <aside id = "receiveup" class="call-to-action bg-primary">
+<!--     <aside id = "receiveup" class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Receive Updates</h3>
-                    <form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    <form id="signup" method="POST" action="https://script.google.com/macros/s/AKfycbzBdV3TiTN9GWk8RHJ3brT2PsQNj8gU83wVFu-6b_MDOqhXRdg/exec" target="hidden_iframe">
                         <div>
                             <label class="sr-only" for="InputEmail">Email Address</label>
-                            <input type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>    
+                            <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"></input>    
                         </div>
-                        <button type="submit" class="btn btn-lg btn-light">Submit</button>
+                        <button id="submit" type="submit" class="btn btn-lg btn-light">Submit</button>
                     </form>
                     
                 </div>
@@ -110,19 +120,36 @@
     </aside> -->
 
     <!-- Map -->
-    <!-- <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
+<!--     <section id="contact" class="map">
+        <div id="daMap" class="daMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3086.235323108824!2d-76.61942903547931!3d39.32825361113491!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c804df8502f88d%3A0x303d58494fa04c66!2sJohns+Hopkins+University!5e0!3m2!1sen!2sus!4v1423968102142" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        </div>
         <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+            <a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3086.235323108824!2d-76.61942903547931!3d39.32825361113491!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c804df8502f88d%3A0x303d58494fa04c66!2sJohns+Hopkins+University!5e0!3m2!1sen!2sus!4v1423968102142"></a>
         </small>
-        </iframe>
+        <div class="address">
+            <p>3400 North Charles Street</p>
+            <p>Baltimore, MD 21218</p>
+        </div>
     </section> -->
+
+    <section class="hosted-by">
+        <div>
+            <h2>Hosted By</h2>
+            <h5>Innovation Factory</h5>
+            <h3>In Collaboration With</h3>
+            <h5>Hopkins Medical Device Network</h5>
+            <h5>Johns Hopkins Biomedical Engineering</h5>
+            <h5>HopHacks</h5>
+            <h5>Johns Hopkins Robotics Club</h5>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row" id="footer-text">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4><strong>MedHacks</strong>
                     </h4>
@@ -145,7 +172,8 @@
                         </li>
                     </ul> -->
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; MedHacks 2015</p>
+                    <p>Website built by <a href="https://twitter.com/dwest_jr" target="_blank">David West</a> and <a href="http://ronboger.me" target="_blank">Ron Boger</a></p>
+                    <p >Copyright &copy; MedHacks 2015</p>
                 </div>
             </div>
         </div>
@@ -159,6 +187,14 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
+
+
+    $("#submit").click(function() {
+        $("#InputEmail")[0].value = '';
+        $("#thanks")[0].style.display = 'block';  
+    })
+    
+
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
@@ -186,6 +222,7 @@
                 }
             }
         });
+        
     });
     </script>
 
