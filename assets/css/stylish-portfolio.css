@@ -264,16 +264,58 @@ hr.small {
     width: 20%;
 }
 
-.hosted-by {
-    width: 600px;
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
+.sponsors {
     text-align: center;
-    float: center;
-    /*position: absolute;*/
-    border: 1px solid black;
+}
+
+.hosted-by, .in-collab {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.in-collab {
+    border-left: 1px solid #eee;
+}
+
+.sponsor {
+    display: inline-block;
+    margin: 10px;
+}
+
+.sponsor, .sponsor:visited {
+    opacity: 0.6;
+}
+
+.sponsor:hover {
+    opacity: 0.8;
+}
+
+.sponsor:active {
+    opacity: 0.9;
+}
+
+.sponsor-if {
+    margin-top: 24px;
+}
+
+.sponsors:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media all and (max-width: 860px) {
+    .in-collab {
+        border: none;
+    }
+
+    .hosted-by, .in-collab {
+        float: none;
+        margin: 10px auto;
+    }
 }
 
 /* Footer */
