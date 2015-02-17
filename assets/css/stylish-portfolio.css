@@ -187,7 +187,14 @@ hr.small {
 
 .about {
     background-color: #efefef;
-    padding: 10px 0;
+    padding: 60px 0;
+}
+
+@media all and (max-width:700px) {
+
+    .about {
+        padding: 20px 0;
+    }
 }
 
 /* Services */
