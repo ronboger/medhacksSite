@@ -24,10 +24,17 @@ body {
 }
 
 .text-vertical-center h1 {
-    margin: 0;
+    margin: 0 0 24px 0;
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
+}
+
+@media(max-width:900px) {
+
+    .text-vertical-center h1 {
+        font-size: 2.5em;
+    }
 }
 
 /* Custom Button Styles */
@@ -160,18 +167,27 @@ hr.small {
     background-color: #000000;
     width: 100%;
     height: 100%;
-    background: url(../img/webbg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background: url(../img/logo_responsive.png) no-repeat center center, url(../img/webbg_responsive.jpg) #000 no-repeat center center scroll;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+@media(max-width:900px) {
+    .header {
+        -webkit-background-size: contain, cover;
+        -moz-background-size: contain, cover;
+        background-size: contain, cover;
+        -o-background-size: contain, cover;
+    }
 }
 
 /* About */
 
 .about {
-    padding: 120px 100px;
     background-color: #efefef;
+    padding: 10px 0;
 }
 
 /* Services */
@@ -230,6 +246,12 @@ hr.small {
 .signup-form {
     width: 50%;
     margin: 10px auto 10px auto;
+}
+
+@media(max-width:900px) {
+    .signup-form {
+        width: 90%;
+    }
 }
 
 .form-thanks {
@@ -322,6 +344,20 @@ hr.small {
     .hosted-by, .in-collab {
         float: none;
         margin: 10px auto;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 700px) {
+
+    .hosted-by, .in-collab {
+        margin: 0;
+        text-align: center;
+    }
+
+    .sponsor {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 
