@@ -232,6 +232,13 @@ hr.small {
     margin: 10px auto 10px auto;
 }
 
+.form-thanks {
+    display: none;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #FFF200;
+}
+
 /* Map */
 
 .daMap {
@@ -329,7 +336,6 @@ footer {
     background-size: cover;
     height: 100%;
 }
-
 
 
 

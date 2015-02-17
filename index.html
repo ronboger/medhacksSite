@@ -86,12 +86,11 @@
         <div class="text-vertical-center">
             <h1>Coming Soon - Stay Tuned</h1>
             <!-- <h3>Receive Updates</h3> -->
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-                <form id="signup" method="POST" action="https://script.google.com/macros/s/AKfycbzBdV3TiTN9GWk8RHJ3brT2PsQNj8gU83wVFu-6b_MDOqhXRdg/exec" target="hidden_iframe">
+                <form id="signup" method="POST" action="#">
                     <div class="signup-form">
                         <label class="sr-only" for="InputEmail">Email Address</label>
                         <input name="email" type="email" class="form-control" id="InputEmail" placeholder="Enter your email" />
-                        <p id="thanks" style="display: none;margin-top: 10px;font-size: 18px;color: #FFF200;">Thanks! We'll send you updates as they come.</p>   
+                        <p id="thanks" class="form-thanks"></p>   
                     </div>
                     <button id="submit" type="submit" class="btn btn-lg btn-light">Keep Me Updated!</button>
                 </form>
@@ -191,11 +190,34 @@
     <script>
 
 
-    $("#submit").click(function() {
-        $("#InputEmail")[0].value = '';
-        $("#thanks")[0].style.display = 'block';  
-    })
-    
+    $("#submit").click(function(e) {
+
+        e.preventDefault();
+
+        var email = $("#InputEmail")[0],
+            thanks = $("#thanks")[0];
+
+        if(email.value.match(/^\S+@\S+\.\S+$/) === null) {
+
+            thanks.textContent = 'Whoops! Please make sure you entered a valid email address.';
+            thanks.style.display = 'block';
+            return;
+        }
+
+        $.ajax({
+
+            type: 'POST',
+            url: 'http://pooleapp.com/stash/b97acdf1-d3f2-4557-b975-6ef6f77dab22/',
+            data: {
+                email: email.value,
+            }
+        });
+
+        email.value = '';
+        thanks.textContent = 'Thanks! We\'ll send you updates as they come.';
+        thanks.style.display = 'block';
+    });
+
 
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
