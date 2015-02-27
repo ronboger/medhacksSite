@@ -371,13 +371,13 @@ hr.small {
 /* Footer */
 
 footer {
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(17, 89, 115, 0.12)), url('../img/general-surgery.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 1) 10%, rgba(17, 89, 115, 0.12)), url('../img/general-surgery.jpg');
     padding-top: 500px;
     /*background-position: center;*/
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    padding-bottom: 200px;
 }
 
 
