@@ -342,12 +342,6 @@ hr.small {
     display: table;
     clear: both;
 }
-.sponsor-icm {
-    height: 65%;
-    width: 65%;
-    /*way too big otherwise*/
-}
-
 
 @media all and (max-width: 860px) {
     .in-collab {
