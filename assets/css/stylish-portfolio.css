@@ -57,25 +57,99 @@ hr.small {
 
 /* Header */
 .header {
+    background-color: #000;
     display: table;
     position: relative;
-    background-color: #000000;
     width: 100%;
     height: 100%;
-    background: url(../img/logo_responsive.png) no-repeat center center, url(../img/webbg_responsive.jpg) #000 no-repeat center center scroll;
-    -webkit-background-size: auto, cover;
-    -moz-background-size: auto, cover;
-    background-size: auto, cover;
-    -o-background-size: auto, cover;
+    -webkit-transform: translateZ(0);
+}
+
+.header-grad,
+.header-pcb,
+.header-bg,
+.header-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.header-grad {
+    background: linear-gradient(to left, #000 30%, #fff 50%, #000 70%);
+    transform: translateX(-100%);
+    -webkit-animation: move 10s infinite 1s;
+}
+
+@-webkit-keyframes move {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    75% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.header-pcb {
+    background-image: url(../img/pcbeautiful.png);
+}
+
+.header-bg {
+    background: url(../img/webbg_responsive.jpg) repeat 0 0 scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    opacity: .9;
+}
+
+.header-logo {
+    background: url(../img/logo_responsive.png) no-repeat center center;
+     -webkit-background-size: auto;
+    -moz-background-size: auto;
+    background-size: auto;
+    -o-background-size: auto;
+
+    /*-webkit-animation: pulse 1s linear infinite;/**/
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        background-size: 51% auto;
+    }
+
+    50% {
+        background-size: 50% auto;
+    }
+
+    90% {
+        background-size: 50.5% auto;
+    }
+
+    100% {
+        background-size: 51% auto;
+    }
 }
 
 @media(max-width:900px) {
-    .header {
-        -webkit-background-size: contain, cover;
-        -moz-background-size: contain, cover;
-        background-size: contain, cover;
-        -o-background-size: contain, cover;
+    .header-logo {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+        -o-background-size: contain;
     }
+}
+
+.header-logo h1,
+.header-logo h2,
+.header-logo h3 {
+    text-indent: -9999px;
 }
 
 /* About */
