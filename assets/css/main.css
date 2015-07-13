@@ -8,7 +8,7 @@ body {
 
 body {
     /*font-family: 'Roboto Slab', serif;*/
-     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    font-weight: 300;
 }
 
@@ -179,7 +179,7 @@ hr.small {
 
 .faq-div {
 
-    margin: 5px 5px 5px 5px;
+    margin: 5px 0;
     background-color: #fff;
     opacity: .8;
 }
@@ -188,9 +188,13 @@ hr.small {
     background: url(../img/microarray.png) no-repeat center center scroll;
 }
 
+.faq .row {
+    margin: 0;
+}
+
 .signup-form {
     width: 50%;
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
 }
 
 @media(max-width:900px) {
