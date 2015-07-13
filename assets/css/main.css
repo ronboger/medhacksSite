@@ -7,7 +7,9 @@ body {
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
 }
 
 .text-vertical-center {
@@ -173,6 +175,17 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.faq-div {
+
+    margin: 5px 5px 5px 5px;
+    background-color: #fff;
+    opacity: .8;
+}
+
+.faq {
+    background: url(../img/microarray.png) no-repeat center center scroll;
 }
 
 .signup-form {
