@@ -180,12 +180,13 @@ hr.small {
 .faq-div {
 
     margin: 5px 0;
-    background-color: #fff;
-    opacity: .8;
+    /*background-color: #fff;
+    opacity: .8;*/
 }
 
 .faq {
-    background: url(../img/microarray.png) no-repeat center center scroll;
+    /*background: url(../img/microarray.png) no-repeat center center scroll;*/
+    background-color: #efefef;
 }
 
 .faq .row {
