@@ -1,8 +1,3 @@
-# MedHacks coming soon site
+# MedHacks main website
 
-Todo
-======
-1. Hosting from the ACM (done but need to switch over)
-2. Find better font scheme for either logo or website
-3. Find a way to use the font primetime as text so the front page image doesn't have the text from the image
-4. Make the footer text so that it works on all screen sizes
+At MedHacks 2015, the student-run medical hackathon at Johns Hopkins University, today’s brightest minds are being empowered to design tomorrow’s greatest innovations. We're selecting the top young technologists, scientists, and engineers from around the country, and giving them 36 hours to confront the most universal human challenge: health. Against the backdrop of one of the world’s leaders in medical innovation - Johns Hopkins University - hackers across all disciplines will unite in Baltimore, meet with experts in every part of the medical field, and develop their solutions to complex healthcare problems. At the end of the weekend-long event, teams will have the opportunity to present their projects. Winners will be chosen by a distinguished board of judges.
