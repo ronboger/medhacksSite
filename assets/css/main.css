@@ -250,6 +250,11 @@ hr.small {
     margin-top: 24px;
 }
 
+.sponsor-google {
+    width: 300px;
+    height: auto;
+}
+
 .sponsors:after {
     content: '';
     display: table;
