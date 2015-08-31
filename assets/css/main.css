@@ -1,5 +1,4 @@
 /* Global Styles */
-
 html,
 body {
     width: 100%;
@@ -7,7 +6,6 @@ body {
 }
 
 body {
-    /*font-family: 'Roboto Slab', serif;*/
      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    font-weight: 300;
 }
@@ -77,9 +75,24 @@ hr.small {
     background: linear-gradient(to left, #000 30%, #fff 50%, #000 70%);
     transform: translateX(-100%);
     -webkit-animation: move 10s infinite 1s;
+    animation: move 10s infinite 1s;
 }
 
 @-webkit-keyframes move {
+    0% {
+        -webkit-transform: translateX(-100%);
+    }
+
+    75% {
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%);
+    }
+}
+
+@-moz-keyframes move {
     0% {
         transform: translateX(-100%);
     }
@@ -89,6 +102,23 @@ hr.small {
     }
 
     100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes move {
+    0% {
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    75% {
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    100% {
+        -ms-transform: translateX(100%);
         transform: translateX(100%);
     }
 }
@@ -112,26 +142,6 @@ hr.small {
     -moz-background-size: auto;
     background-size: auto;
     -o-background-size: auto;
-
-    /*-webkit-animation: pulse 1s linear infinite;/**/
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        background-size: 51% auto;
-    }
-
-    50% {
-        background-size: 50% auto;
-    }
-
-    90% {
-        background-size: 50.5% auto;
-    }
-
-    100% {
-        background-size: 51% auto;
-    }
 }
 
 @media(max-width:900px) {
@@ -178,14 +188,10 @@ hr.small {
 }
 
 .faq-div {
-
     margin: 5px 0;
-    /*background-color: #fff;
-    opacity: .8;*/
 }
 
 .faq {
-    /*background: url(../img/microarray.png) no-repeat center center scroll;*/
     background-color: #efefef;
 }
 
@@ -274,7 +280,6 @@ hr.small {
 }
 
 @media all and (max-width: 700px) {
-
     .hosted-by, .in-collab {
         margin: 0;
         text-align: center;
