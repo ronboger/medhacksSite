@@ -11,20 +11,34 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="assets/crosslogo.ico">
-    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
 </head>
 <body id="page-top">
-    <header id="top" class="header">
+    <div class="header-navbar">
+        <h1 class="header-navbar-logo">MedHacks</h1>
+
+        <ul class="header-navbar-items">
+            <li class="header-navbar-item"><a href="#about" class="header-navbar-link">About</a></li>
+            <li class="header-navbar-item"><a href="#apply" class="header-navbar-link">Apply</a></li>
+            <li class="header-navbar-item"><a href="#faq" class="header-navbar-link">FAQ</a></li>
+            <li class="header-navbar-item"><a href="#sponsors" class="header-navbar-link">Sponsor</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
         <div class="header-grad"></div>
         <div class="header-pcb"></div>
         <div class="header-bg"></div>
-        <div class="header-logo">
-            <h1>MedHacks</h1>
-            <h2>Johns Hopkins University</h2>
+        <div class="header-text">
+            <h2 class="header-text-headline">Premier Student-Run Medical Hackathon</h2>
+            <h3 class="header-text-byline">at <strong>Johns Hopkins University</strong> | Oct. 2-4</h3>
+            <div class="header-text-actions">
+                <a href="http://medhacks.splashthat.com/" class="header-text-action">Apply</a>
+                <a href="#" class="header-text-action">Sponsor</a>
+            </div>
         </div>
-    </header>
+    </div>
 
-    <section id="about" class="about">
+    <div id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -34,16 +48,16 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="callout">
+    <div class="callout" id="apply">
         <div class="text-vertical-center">
             <h1>Applications are now open!</h1>
             <a href="http://medhacks.splashthat.com" target="_blank" class="btn btn-lg btn-light">Take me there!</a>
         </div>
-    </section>
+    </div>
 
-    <section id="faq" class="faq">
+    <div id="faq" class="faq">
         <div class="row">
             <div class="col-md-4 col-lg-4 text-center faq-div">
                 <h3>What is a hackathon?</h3>  
@@ -89,9 +103,9 @@
                 <p>Applications are now open! <a href="http://medhacks.splashthat.com" target="_blank">Apply here.</a></p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="support-us">
+    <div class="support-us" id="sponsors">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -101,9 +115,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="sponsors">
+    <div class="sponsors">
         <div class="hosted-by">
             <h2>Collaborators</h2>
             <a href="http://ifjh.org/" class="sponsor sponsor-if" target="_blank"><img src="assets/img/sponsors/innovation-factory.png" alt="Innovation Factory"></a>
@@ -128,9 +142,9 @@
             <a href="http://www.openconnecto.me" class="sponsor sponsor-ocp" target="_blank"><img src="assets/img/sponsors/ocp.png" alt="Open Connectome Project"></a>
             <a href="http://www.icm.jhu.edu/" class="sponsor sponsor-icm" target="_blank"><img src="assets/img/sponsors/ICM.png" class="sponsor-icm" alt="ICM"></a>
         </div>
-    </section>
+    </div>
 
-    <footer>
+    <div class="page-footer">
         <div class="container">
             <div class="row" id="footer-text">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -140,13 +154,100 @@
                     <a href="http://facebook.com/MedHacks" target="_blank" class="fa fa-facebook"></a>
                     <hr class="small">
                     <p>Organized by <a href="http://ronboger.me" target="_blank">Ron Boger</a>, Kush Gupta, Neil Rens, Tamara Goldschmitt, Greg Kiar, Eyal Foni, Elizabeth Galbut, Dr. Joshua T. Vogelstein</p>
-                    <p>Special thanks to <a href="https://twitter.com/dwest_jr" target="_blank">David West</a>, Bailey Parker, and Christopher Naco</p>
+                    <p>Special thanks to Bailey Parker, <a href="https://twitter.com/dwest_jr" target="_blank">David West</a>, and Christopher Naco</p>
                     <p>Copyright &copy; MedHacks 2015</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
+    <script src="/assets/js/jquery.js"></script>
+    <script>
+    // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+    // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+    // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+
+    // MIT license
+
+    (function() {
+        var lastTime = 0;
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] ||
+              window[vendors[x]+'CancelRequestAnimationFrame'];
+        }
+
+        if (!window.requestAnimationFrame)
+            window.requestAnimationFrame = function(callback, element) {
+                var currTime = new Date().getTime();
+                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+                  timeToCall);
+                lastTime = currTime + timeToCall;
+                return id;
+            };
+
+        if (!window.cancelAnimationFrame)
+            window.cancelAnimationFrame = function(id) {
+                clearTimeout(id);
+            };
+    }());
+
+    (function(window, document, undefined) {
+
+      $(document).ready(function() {
+
+        var running = false,
+            $header = $('.header-navbar');
+
+        function updateHeaderScroll() {
+
+          if(running) {
+
+            return;
+          }
+
+          running = true;
+
+          window.requestAnimationFrame(function() {
+
+            $header.toggleClass('header-navbar-scrolled', $(window).scrollTop() > 80);
+            running = false;
+          });
+        }
+
+        updateHeaderScroll();
+
+        $(window).scroll(updateHeaderScroll);
+      });
+
+    })(window, window.document);
+    </script>
+    <script>
+    $(function() {
+
+        $('a[href*=#]:not([href=#])').click(function() {
+
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+                if (target.length) {
+
+                    $('html,body').animate({
+
+                        scrollTop: target.offset().top - 100,
+
+                    }, 500);
+
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-59988687-1', 'auto');ga('send', 'pageview');
     </script>

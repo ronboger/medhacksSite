@@ -49,14 +49,123 @@ hr.small {
     max-width: 100px;
 }
 
+/* Navbar */
+.header-navbar {
+   box-shadow: 0 -5px 10px 4px rgba(0, 0, 0, .5);
+   height: 100px;
+   position: fixed;
+   top: 0;
+   transition: background-color .4s ease-out;
+   width: 100%;
+   z-index: 1;
+
+   /* Hack to prevent "dancing" on webkit/blink */
+   -webkit-transform: translateZ(0);
+}
+
+.header-navbar-logo {
+   background: url(/assets/img/logo_light.png) no-repeat;
+   float: left;
+   height: 60px;
+   margin: 20px 40px;
+   padding: 0;
+   position: relative;
+   text-indent: -9999px;
+   width: 300px;
+}
+
+.header-navbar-logo:after {
+   background: url('/assets/img/logo_dark.png') no-repeat;
+   bottom: 0;
+   content: '';
+   display: block;
+   left: 0;
+   opacity: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   transition: .4s opacity ease-out;
+}
+
+.header-navbar-items {
+   float: right;
+   list-style: none;
+   margin: 0 10px;
+}
+
+.header-navbar-item {
+   float: left;
+}
+
+.header-navbar-link {
+   color: #fff;
+   display: block;
+   font: bold 18px/20px "Helvetica Neue";
+   margin: 20px 8px 0;
+   padding: 10px 14px 20px;
+   position: relative;
+   text-decoration: none;
+   transition: color .1s ease-out;
+}
+
+.header-navbar-link:after {
+   background-color: #fff;
+   bottom: 0;
+   content: '';
+   display: block;
+   height: 3px;
+   left: 0;
+   position: absolute;
+   transition: height .1s ease-out;
+   width: 100%;
+   z-index: -1;
+}
+
+.header-navbar-link:hover,
+.header-navbar-link:active,
+.header-navbar-link:focus,
+.header-navbar-link-active {
+   color: #193e53;
+   text-decoration: none;
+}
+
+.header-navbar-link:hover:after,
+.header-navbar-link:focus:after,
+.header-navbar-link-active:after {
+   height: 100%;
+}
+
+.header-navbar-scrolled {
+   background-color: rgba(255, 255, 255, 0.95);
+}
+
+.header-navbar-scrolled .header-navbar-logo:after {
+   opacity: 1;
+}
+
+.header-navbar-scrolled .header-navbar-link {
+   color: #193e53;
+}
+
+.header-navbar-scrolled .header-navbar-link:after {
+   background-color: #193e53;
+}
+
+.header-navbar-scrolled .header-navbar-link:hover,
+.header-navbar-scrolled .header-navbar-link:focus {
+   color: #fff;
+}
+
 /* Header */
 .header {
     background-color: #000;
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 70vh;
     -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
     overflow: hidden;
 }
 
@@ -136,27 +245,68 @@ hr.small {
     opacity: .9;
 }
 
-.header-logo {
-    background: url(../img/logo_responsive.png) no-repeat center center;
-     -webkit-background-size: auto;
-    -moz-background-size: auto;
-    background-size: auto;
-    -o-background-size: auto;
+.header-text {
+   font-family: 'Helvetica Neue';
+   top: 50%;
+   position: absolute;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   width: 100%;
 }
 
-@media(max-width:900px) {
-    .header-logo {
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        background-size: contain;
-        -o-background-size: contain;
-    }
+.header-text-headline,
+.header-text-byline {
+   color: #fff;
+   margin: 0;
+   padding: 0;
+   text-align: center;
 }
 
-.header-logo h1,
-.header-logo h2,
-.header-logo h3 {
-    text-indent: -9999px;
+.header-text-headline {
+   font-size: 48px;
+   line-height: 60px;
+   margin-bottom: 12px;
+}
+
+.header-text-byline {
+   font-size: 24px;
+   font-weight: normal;
+   line-height: 30px;
+}
+
+.header-text-actions {
+   margin-top: 48px;
+   text-align: center;
+}
+
+.header-text-action {
+   border: 3px solid #fff;
+   color: #fff;
+   display: inline-block;
+   font-size: 20px;
+   line-height: 24px;
+   margin-right: 18px;
+   padding: 14px 30px;
+   transform: scale(.925);
+   transition: .2s background-color ease-out, .2s color ease-out, .2s transform ease-out;
+}
+
+.header-text-action:hover,
+.header-text-action:active,
+.header-text-action:focus {
+   background-color: #fff;
+   color: #193e53;
+   text-decoration: none;
+   transform: scale(1);
+}
+
+.header-text-action:active {
+   transform: scale(.975);
+}
+
+.header-text-action:last-of-type {
+   margin-right: 0;
 }
 
 /* About */
@@ -292,7 +442,7 @@ hr.small {
 }
 
 /* Footer */
-footer {
+.page-footer {
     background: linear-gradient(rgba(255, 255, 255, 1) 10%, rgba(17, 89, 115, 0.12)), url('../img/general-surgery.jpg');
     padding-top: 500px;
     width: 100%;
