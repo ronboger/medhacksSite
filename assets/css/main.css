@@ -65,6 +65,7 @@ hr.small {
 
 .header-navbar-logo {
    background: url(/assets/img/logo_light.png) no-repeat;
+   cursor: pointer;
    float: left;
    height: 60px;
    margin: 20px 40px;
