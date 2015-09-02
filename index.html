@@ -16,6 +16,7 @@
     <div class="header-navbar">
         <h1 class="header-navbar-logo">MedHacks</h1>
 
+        <div class="header-navbar-hamburger"></div>
         <ul class="header-navbar-items">
             <li class="header-navbar-item"><a href="#about" class="header-navbar-link">About</a></li>
             <li class="header-navbar-item"><a href="#apply" class="header-navbar-link">Apply</a></li>
@@ -163,70 +164,76 @@
 
     <script src="/assets/js/jquery.js"></script>
     <script>
-    // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-    // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-
-    // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-
-    // MIT license
-
-    (function() {
-        var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
-        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] ||
-              window[vendors[x]+'CancelRequestAnimationFrame'];
-        }
-
-        if (!window.requestAnimationFrame)
-            window.requestAnimationFrame = function(callback, element) {
-                var currTime = new Date().getTime();
-                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-                  timeToCall);
-                lastTime = currTime + timeToCall;
-                return id;
-            };
-
-        if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function(id) {
-                clearTimeout(id);
-            };
-    }());
-
-    (function(window, document, undefined) {
-
-      $(document).ready(function() {
-
-        var running = false,
-            $header = $('.header-navbar');
-
-        function updateHeaderScroll() {
-
-          if(running) {
-
-            return;
-          }
-
-          running = true;
-
-          window.requestAnimationFrame(function() {
-
-            $header.toggleClass('header-navbar-scrolled', $(window).scrollTop() > 20);
-            running = false;
-          });
-        }
-
-        updateHeaderScroll();
-
-        $(window).scroll(updateHeaderScroll);
-      });
-
-    })(window, window.document);
-    </script>
-    <script>
     $(function() {
+
+        function isMobile() {
+
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+        // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+        // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+
+        // MIT license
+
+        (function() {
+            var lastTime = 0;
+            var vendors = ['ms', 'moz', 'webkit', 'o'];
+            for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+                window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] ||
+                  window[vendors[x]+'CancelRequestAnimationFrame'];
+            }
+
+            if (!window.requestAnimationFrame)
+                window.requestAnimationFrame = function(callback, element) {
+                    var currTime = new Date().getTime();
+                    var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                    var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+                      timeToCall);
+                    lastTime = currTime + timeToCall;
+                    return id;
+                };
+
+            if (!window.cancelAnimationFrame)
+                window.cancelAnimationFrame = function(id) {
+                    clearTimeout(id);
+                };
+        }());
+
+        if(!isMobile()) {
+            (function(window, document, undefined) {
+
+              $(document).ready(function() {
+
+                var running = false,
+                    $header = $('.header-navbar');
+
+                function updateHeaderScroll() {
+
+                  if(running) {
+
+                    return;
+                  }
+
+                  running = true;
+
+                  window.requestAnimationFrame(function() {
+
+                    $header.toggleClass('header-navbar-scrolled', $(window).scrollTop() > 20);
+                    running = false;
+                  });
+                }
+
+                updateHeaderScroll();
+
+                $(window).scroll(updateHeaderScroll);
+              });
+
+            })(window, window.document);
+        }
 
         $('a[href*=#]:not([href=#])').click(function() {
 
@@ -242,6 +249,8 @@
 
                     }, 500);
 
+                    $('html').removeClass('nav-open');
+
                     return false;
                 }
             }
@@ -250,7 +259,26 @@
         $('.header-navbar-logo').click(function() {
 
             $('html,body').animate({scrollTop: 0}, 500);
+            $('html').removeClass('nav-open');
         });
+
+        $('.header-navbar-hamburger').click(function() {
+
+            $('html').toggleClass('nav-open');
+        });
+
+        $('body').click(function(e) {
+
+            if($('html').hasClass('nav-open') && $(e.target).parents('.header-navbar').length === 0) {
+
+                $('html').removeClass('nav-open');
+            }
+        });
+
+        if(isMobile()) {
+
+            $('.header-navbar').addClass('header-navbar-scrolled');
+        }
     });
     </script>
     <script>
