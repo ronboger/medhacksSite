@@ -667,9 +667,10 @@ hr.small {
 /* Footer */
 .page-footer {
     background: linear-gradient(rgba(255, 255, 255, 1) 10%, rgba(17, 89, 115, 0.12)), url('../img/general-surgery.jpg');
-    padding-top: 500px;
+    padding-top: 350px;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover cover;
+    background-position: center center;
     padding-bottom: 200px;
 }
