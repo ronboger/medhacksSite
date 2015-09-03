@@ -524,25 +524,42 @@ hr.small {
 
 
 /* Sponsors */
+.support-heading {
+   font-size: 48px;
+   font-weight: bold;
+   margin: 48px 0;
+}
+
+.lead-interest {
+   margin-bottom: 8px;
+}
+
 .sponsors {
     text-align: center;
 }
 
-.hosted-by, .in-collab {
-    width: 50%;
-    float: left;
-    margin-top: 20px;
-    padding: 0 20px 20px 20px;
+.partners-list, .sponsors-list, .collaborators-list {
+    padding: 0 10%;
     box-sizing: border-box;
 }
 
-.in-collab {
+.sponsor-heading, .partners-heading, .collaborators-heading {
+   font-weight: bold;
+   margin: 40px 0 10px;
+}
+
+.sponsors-list {
     border-left: 1px solid #eee;
 }
 
 .sponsor {
     display: inline-block;
-    margin: 20px;
+    margin: 14px;
+    transition: .2s opacity ease-out;
+}
+
+.sponsor img {
+   max-height: 60px;
 }
 
 .sponsor, .sponsor:visited {
@@ -557,15 +574,6 @@ hr.small {
     opacity: 0.9;
 }
 
-.sponsor-if {
-    margin-top: 24px;
-}
-
-.sponsor-google {
-    width: 300px;
-    height: auto;
-}
-
 .sponsors:after {
     content: '';
     display: table;
@@ -573,11 +581,11 @@ hr.small {
 }
 
 @media all and (max-width: 860px) {
-    .in-collab {
+    .sponsors-list {
         border: none;
     }
 
-    .hosted-by, .in-collab {
+    .partners-list, .sponsors-list {
         float: none;
         margin: 10px auto;
         width: 100%;
@@ -585,7 +593,7 @@ hr.small {
 }
 
 @media all and (max-width: 700px) {
-    .hosted-by, .in-collab {
+    .partners-list, .sponsors {
         margin: 0;
         text-align: center;
     }
