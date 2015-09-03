@@ -295,7 +295,7 @@ hr.small {
    }
 }
 
-@media screen and (max-height: 830px) and (orientation: landscape) {
+@media screen and (max-device-width: 736px) and (orientation: landscape) {
    .header {
       height: 200%;
    }
