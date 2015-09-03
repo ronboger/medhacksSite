@@ -477,6 +477,15 @@ hr.small {
     }
 }
 
+.info-heading {
+   font-weight: bold;
+   margin-bottom: 48px;
+}
+
+.info-para {
+   line-height: 36px;
+}
+
 /* Callout */
 .callout {
     display: table;
