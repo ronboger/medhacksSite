@@ -650,7 +650,7 @@ hr.small {
 }
 
 .faq-box h3:after {
-   background-color: #193d56;
+   background-color: #D0D0D0;
    content: '';
    display: block;
    height: 1px;
