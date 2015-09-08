@@ -52,11 +52,12 @@
         </div>
     </div>
 
-    <div class="callout" id="apply">
-        <div class="text-vertical-center">
-            <h1>Applications are now open!</h1>
-            <a href="http://medhacks.splashthat.com" target="_blank" class="btn btn-lg btn-light">Take me there!</a>
-        </div>
+    <div class="section-apply" id="apply">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" id="ekg" class="section-apply-ekg" width="2000" height="104px" viewBox="0 0 2000 52">
+            <path d="M0 39h969.4776l2.798 -5.740l5.525 10.763l12.629 -48.956l13.705 71.031l12.315 -35.070l4.691 14.717l5.727 -13.101l3.655 5.925h969.477" stroke="white" fill="transparent" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+        <h2 class="section-apply-heading">Excited to <span id="thumper">disrupt</span> healthcare?</h2>
+        <a href="http://medhacks.splashthat.com" class="action-btn action-btn-light">Apply</a>
     </div>
 
     <div id="faq" class="faq">
@@ -284,6 +285,68 @@
             $('.header-navbar').addClass('header-navbar-scrolled');
         }
     });
+    </script>
+    <script>
+        $(function() {
+
+            var ekg         = document.getElementById('ekg'),
+                path        = ekg.getElementsByTagName('path')[0],
+                totalLength = path.getTotalLength()
+                thumper     = document.getElementById('thumper'),
+                style       = document.createElement('style'),
+                resizeTimeout = null;
+
+            document.getElementsByTagName('head')[0].appendChild(style);
+            var stylesheet = style.sheet;
+
+            function resizeEkg() {
+
+                resizeTimeout = null;
+
+                var width = document.body.clientWidth + 200;
+
+                ekg.setAttribute('width', width);
+
+                var viewBox = ekg.getAttribute('viewBox').split(' ');
+                viewBox[2] = width;
+                ekg.setAttribute('viewBox', viewBox.join(' '));
+
+                var side = ((width - 61.045) / 2).toFixed(3);
+
+                path.setAttribute('d', 'M0 39h' + side + 'l2.798 -5.740l5.525 10.763l12.629 -48.956l13.705 71.031l12.315 -35.070l4.691 14.717l5.727 -13.101l3.655 5.925h' + side);
+
+                totalLength = path.getTotalLength();
+                path.setAttribute('stroke-dasharray', (totalLength - 100).toFixed(3) + ' 100');
+
+                while(stylesheet.cssRules.length > 0) {
+
+                    stylesheet.deleteRule(0);
+                }
+
+                var animation = 'ekg { 0% { stroke-dashoffset: ' + totalLength.toFixed(3) + '; } 100% { stroke-dashoffset: 0; } }'
+                try { stylesheet.insertRule('@-webkit-keyframes ' + animation, 0); } catch(e) {}
+                try { stylesheet.insertRule('@keyframes ' + animation, 0); } catch(e) {}
+
+                var duration = totalLength / 350;
+                path.style.webkitAnimationDuration = duration + 's';
+                path.style.animationDuration       = duration + 's';
+            }
+
+            resizeEkg();
+
+            path.style.webkitAnimation = 'ekg 5.7s ease-in infinite';
+            path.style.animation       = 'ekg 5.7s ease-in infinite';
+
+            $(window).on('resize', function() {
+
+                if(resizeTimeout !== null) {
+
+                    clearTimeout(resizeTimeout);
+                }
+
+                resizeTimeout = setTimeout(resizeEkg, 30);
+            });
+        });
     </script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-59988687-1', 'auto');ga('send', 'pageview');
