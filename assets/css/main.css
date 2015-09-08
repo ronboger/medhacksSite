@@ -537,19 +537,58 @@ hr.small {
    line-height: 36px;
 }
 
-/* Callout */
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
+/* Apply */
+.section-apply {
+    background-color: #193d56;
     color: #fff;
-    position: relative;
     overflow: hidden;
-    background: url(../img/tissue-fractal-Proscia.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    padding: 80px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.section-apply-ekg {
+   left: 50%;
+   position: absolute;
+   -ms-transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+}
+
+.section-apply-heading {
+   font-family: 'Helvetica Neue';
+   font-size: 40px;
+   margin-bottom: 32px;
+   margin-top: 104px;
+   -ms-transform: scale(.95);
+   -webkit-transform: scale(.95);
+   transform: scale(.95);
+}
+
+.action-btn-light {
+   border: 3px solid #fff;
+   color: #fff;
+   display: inline-block;
+   font-size: 20px;
+   line-height: 24px;
+   margin-right: 18px;
+   padding: 14px 30px;
+   transform: scale(.925);
+   transition: .2s background-color ease-out, .2s color ease-out, .2s transform ease-out;
+}
+
+.action-btn-light:hover,
+.action-btn-light:active,
+.action-btn-light:focus {
+   background-color: #fff;
+   color: #193e53;
+   text-decoration: none;
+   transform: scale(1);
+}
+
+.action-btn-light:active {
+   transform: scale(.975);
 }
 
 .faq-div {
