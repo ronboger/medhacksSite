@@ -515,6 +515,15 @@ hr.small {
    }
 }
 
+.info-heading,
+.support-heading,
+.sponsor-heading,
+.partners-heading,
+.collaborators-heading,
+.heading-faq{
+   color: #193d56;
+}
+
 /* About */
 .about {
     background-color: #efefef;
@@ -529,7 +538,8 @@ hr.small {
 }
 
 .info-heading {
-   font-weight: bold;
+   font-family: 'Helvetica Neue';
+   font-size: 36px;
    margin-bottom: 48px;
 }
 
@@ -591,45 +601,78 @@ hr.small {
    transform: scale(.975);
 }
 
-.faq-div {
-    margin: 5px 0;
-}
-
 .faq {
     background-color: #efefef;
+    padding: 48px 12%;
 }
 
-.faq .row {
-    margin: 0;
+.faq:after {
+   clear: both;
+   content: '';
+   display: table;
 }
 
-.signup-form {
-    width: 50%;
-    margin: 10px auto;
+.heading-faq {
+   font-family: 'Helvetica Neue';
+   font-size: 36px;
+   margin-bottom: 24px;
+   text-align: center;
 }
 
-@media(max-width:900px) {
-    .signup-form {
-        width: 90%;
-    }
+.faq-column {
+   float: left;
+   margin: 0 1%;
+   width: 48%;
 }
 
-.form-thanks {
-    display: none;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #FFF200;
+@media screen and (max-width: 700px) {
+   .faq {
+      padding: 48px 3%;
+   }
+
+   .faq-column {
+      width: 98%;
+   }
 }
 
+.faq-box {
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, .05);
+    margin: 16px 0;
+    padding: 24px;
+    width: 100%;
+}
+
+.faq-box h3 {
+   color: #193d56;
+   margin: 0 0 16px;
+}
+
+.faq-box h3:after {
+   background-color: #193d56;
+   content: '';
+   display: block;
+   height: 1px;
+   margin-top: 8px;
+   width: 100%;
+}
+
+.faq-box p {
+   font-size: 16px;
+   line-height: 24px;
+   margin: 4px 0;
+}
 
 /* Sponsors */
 .support-heading {
-   font-size: 48px;
-   font-weight: bold;
+   font-family: 'Helvetica Neue';
+   font-size: 36px;
    margin: 48px 0;
 }
 
 .lead-interest {
+   font-size: 20px;
    margin-bottom: 8px;
 }
 
@@ -643,7 +686,8 @@ hr.small {
 }
 
 .sponsor-heading, .partners-heading, .collaborators-heading {
-   font-weight: bold;
+   font-family: 'Helvetica Neue';
+   font-size: 28px;
    margin: 40px 0 10px;
 }
 
