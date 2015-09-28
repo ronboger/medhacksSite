@@ -619,6 +619,10 @@ hr.small {
    margin-bottom: 24px;
    text-align: center;
 }
+.faq-additional-questions {
+  text-align: center;
+  font-size: 18px;
+}
 
 .faq-column {
    float: left;
