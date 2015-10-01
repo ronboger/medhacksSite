@@ -159,7 +159,31 @@ hr.small {
    color: #fff;
 }
 
-@media all and (max-width: 850px) {
+@media only screen and (max-width: 836px) {
+    .header-navbar {
+       box-shadow: 0 -5px 10px 4px rgba(0, 0, 0, .5);
+       background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .header-navbar-logo:after {
+       opacity: 1;
+    }
+
+    .header-navbar-link {
+       color: #193e53;
+    }
+
+    .header-navbar-link:after {
+       background-color: #193e53;
+    }
+
+    .header-navbar-link:hover,
+    .header-navbar-link:focus {
+       color: #fff;
+    }
+}
+
+@media all and (max-width: 950px) {
    .header-navbar-logo {
       background: url(/assets/img/logo_light_smaller.png) no-repeat;
       height: 45px;
@@ -180,7 +204,7 @@ hr.small {
 
 
 /*@media only screen and (max-device-width: 736px) {*/
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 836px) {
    .header-navbar-hamburger {
       cursor: pointer;
       float: right;
@@ -237,7 +261,7 @@ hr.small {
 
    .nav-open .header-navbar-items {
       box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .25);
-      max-height: 300px; /* TODO: fix magic constant */
+      max-height: 340px; /* TODO: fix magic constant */
    }
 
    .header-navbar-item {
