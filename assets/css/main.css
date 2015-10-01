@@ -525,6 +525,7 @@ hr.small {
    color: #193d56;
 }
 
+
 /* About */
 .about {
     background-color: #efefef;
@@ -606,6 +607,13 @@ hr.small {
     background-color: #efefef;
     padding: 48px 12%;
 }
+
+.schedule {
+    background-color: #193d56;
+    color: #fff;
+    padding-bottom: 48px 12%;
+}
+
 
 .faq:after {
    clear: both;
