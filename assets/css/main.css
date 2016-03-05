@@ -110,7 +110,8 @@ hr.small {
     /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
     /*font-weight: 300;*/
     /*font: bold 18px/20px "Helvetica Neue";*/
-    font: bold 18px/20px;
+    font-weight: bold;
+    font-size: 18px;
     margin: 20px 8px 0;
     padding: 10px 14px 20px;
     position: relative;
