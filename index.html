@@ -30,13 +30,14 @@
         <div class="header-pcb"></div>
         <div class="header-bg"></div>
         <div class="header-text">
-            <h2 class="header-text-headline" id="title">2.0 <span class="beating-heart fa fa-heart"></span></h2>
+            <h2 class="header-text-headline" id="title">MedHacks 2.0 <span class="beating-heart fa fa-heart"></span></h2>
             <h3 class="header-text-caption" id="subtitle">Ready to change the future of healthcare?</h3>
             <h4 class="header-text-byline" id="location">at <strong>Johns Hopkins University</strong> | Sep. 23-25, 2016</h4>
             <h4 class="header-text-byline-caption" id="location-sub">Bloomberg Center of Physics and Astronomy</h4>
 
             <div class="header-text-actions" id="submit">
                 <a href="http://goo.gl/forms/IIniaFOjWABoxEIz1" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Apply - Home']);" class="header-text-action">Sign Up</a>
+                <a id="sponsors" href="sponsors.pdf" class="header-text-action">Sponsors</a>
             </div>
         </div>
         <div style="position: absolute; bottom: 5px; left: 20px;">
@@ -100,21 +101,21 @@
     <script src="/assets/js/jquery.js"></script>
     <script>    
     $('#subtitle').hide();
-    $('#submit').hide();
+    //$('#sponsors').hide();
 
     $(window).scroll(function() {
         if($(document).scrollTop() < ($(document).height() - $(window).height())/2) {
             $('#title').show();
             $('#location').show();
             $('#location-sub').show();
+            $('#sponsors').show();
             $('#subtitle').hide();
-            $('#submit').hide();
         } else if ($(document).scrollTop() > ($(document).height() - $(window).height())/2) {
             $('#title').hide();
             $('#location').hide();
             $('#location-sub').hide();
-            $('#subtitle').show();
-            $('#submit').show();
+            $('#sponsors').hide();
+            $('#subtitle').show();            
         }
     });
     $(function() {
