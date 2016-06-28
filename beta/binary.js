@@ -30,6 +30,20 @@ var redraw = function() {
     	   $(this).html(text);
         }
 	});
+
+    $(".water").each(function( index ) {
+        if(!$(this).hasClass("location")) {
+    	   var text = $(this).text();
+    	
+    	   for(i = 0; i < text.length; i++) {
+    		  if(parseInt(Math.random() * 10) < 1) {
+    		      text = text.replaceAt(i, randomChar(7));
+    		  }
+    	   }
+
+    	   $(this).html(text);
+        }
+	});
 };
 
 setInterval(redraw, 75);
