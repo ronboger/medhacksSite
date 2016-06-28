@@ -26,14 +26,14 @@ f.write("<html><head><link rel='stylesheet' type='text/css' href='binary.css'><s
 prev = -1
 f.write('<span>')
 
-for y in range(0, img.shape[0] + 1600,int(scale * (1.1 * img.shape[1]/img.shape[0]))):
-    for x in range(0, img.shape[1] + 800, scale - 4):
-        if y < 200 or y >= img.shape[0] + 800:
+for y in range(0, img.shape[0] + 400,int(scale * (1.1 * img.shape[1]/img.shape[0]))):
+    for x in range(0, img.shape[1] + 400, scale - 4):
+        if y < 200 or y >= img.shape[0] + 200:
             px = 0
-        elif x < 400 or x >= img.shape[1] + 400:
+        elif x < 400 or x >= img.shape[1] + 200:
             px = 0
         else:
-            px = img[y - 800, x - 400]
+            px = img[y - 200, x - 200]
         if px > colors[0] - 50 and px < colors[0] + 50:
             if prev != 0:
                 f.write("</span><span class='water' style='color:#CCC'>")
@@ -41,7 +41,7 @@ for y in range(0, img.shape[0] + 1600,int(scale * (1.1 * img.shape[1]/img.shape[
             prev = 0
         else:
             if prev != 1:
-                if x >= img.shape[1] + 400 or y < 800:
+                if x >= img.shape[1] + 200 or y < 200:
                     f.write("</span><span class ='water' style='color:#CCC'>")
                 else:
                     f.write("</span><span class ='land' style='color:red'>")
