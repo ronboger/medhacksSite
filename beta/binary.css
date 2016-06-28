@@ -1,8 +1,8 @@
 .world
 {
 	position:absolute;
-    top: calc(50% - 15px);
-    left: calc(50% + 10px);
+    top: calc(50% - 0px);
+    left: calc(50% - 5px);
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -59,7 +59,8 @@ html,body
     }
     
     .world {
-        left: calc(50% + 15px);
+        left: calc(50% - 12px);
+        top: calc(50% + 6px);
     }
 }
 

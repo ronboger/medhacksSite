@@ -21,37 +21,37 @@ colors = [255, 60]
 scale = 32
 
 f = open('cross.html','w')
-f.write("<html><head><link rel='stylesheet' type='text/css' href='binary.css'><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script></head><body style='background-color:white; margin: 0px; padding: 0px;' ><div class='world-container'><div class='left-sea'></div><div class='right-sea'></div><div style='font-family: courier' class='center world'>")
+f.write("<html><head><link rel='stylesheet' type='text/css' href='binary.css'><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script></head><body style='margin: 0px; padding: 0px;' ><div class='world-container'><div class='left-sea'></div><div class='right-sea'></div><div style='font-family: courier' class='center world'>")
 
 prev = -1
 f.write('<span>')
 
-for y in range(0, img.shape[0] + 400,int(scale * (1.1 * img.shape[1]/img.shape[0]))):
-    for x in range(0, img.shape[1] + 400, scale - 4):
-        if y < 200 or y >= img.shape[0] + 200:
+for y in range(0, img.shape[0] + 800,int(scale * (1.1 * img.shape[1]/img.shape[0]))):
+    for x in range(0, img.shape[1] + 800, scale - 4):
+        if y < 200 or y >= img.shape[0] + 400:
             px = 0
-        elif x < 400 or x >= img.shape[1] + 200:
+        elif x < 400 or x >= img.shape[1] + 400:
             px = 0
         else:
-            px = img[y - 200, x - 200]
+            px = img[y - 400, x - 400]
         if px > colors[0] - 50 and px < colors[0] + 50:
             if prev != 0:
-                f.write("</span><span class='water' style='color:#CCC'>")
+                f.write("</span><span class='water'>")
             f.write(randomChar(7))
             prev = 0
         else:
             if prev != 1:
-                if x >= img.shape[1] + 200 or y < 200:
-                    f.write("</span><span class ='water' style='color:#CCC'>")
+                if x >= img.shape[1] + 400 or y < 400:
+                    f.write("</span><span class ='water'>")
                 else:
-                    f.write("</span><span class ='land' style='color:red'>")
+                    f.write("</span><span class ='land'>")
             f.write(randomChar(7))
             prev = 1
     f.write("</span></br>")
     if prev == 0:
-        f.write("<span class='water' style='color:#CCC'>"); 
+        f.write("<span class='water'>"); 
     else:
-        f.write("<span class='water' style='color:#CCC'>"); 
+        f.write("<span class='water'>"); 
         
 f.write("</div></div><script src='binary.js'></script></body></html>")
 f.close()
