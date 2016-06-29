@@ -49,17 +49,15 @@ var redraw = function() {
 setInterval(redraw, 75);
 
 
-//resizeFont();
-
-//$(window).resize(resizeFont());
-
-function resizeFont() {
-	var height = $(window).height();
-	var width = $(window).width();
-	$('.world-container').css('font-size', parseInt(width)/48.0 + 'px');
-    console.log(parseInt(width)/48.0);
-
-    /**if (width < $('.world').width()) {
-        $('.world-container').css('font-size', parseInt(width)/55.0 + 'px');
-        }**/
-}
+$('#apply').click(function(e) {
+        e.preventDefault(); 
+        
+        var pos = $(".world").position();
+        console.log(pos.left);
+        //$(".bottom-half").css('left', '-500px');
+        $(".bottom-half").animate({ top: 200  }, 'slow');
+        $(".middle-half").animate({ top: -200 }, 'slow');
+        $(".top-half").animate({ top: -200  }, 'slow');
+        /*your_code_here;*/ 
+        return false; 
+    });

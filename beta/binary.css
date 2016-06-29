@@ -69,3 +69,7 @@ html,body
         font-size: 25px;    
     }
 }
+
+.bottom-half, .top-half, .middle-half {
+    position: relative;
+}
