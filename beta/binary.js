@@ -17,7 +17,7 @@ function randomChar(mix) {
 }
 
 var redraw = function() {
-    $(".land").each(function( index ) {
+    $(".land, .title-border").each(function( index ) {
         if(!$(this).hasClass("location")) {
     	   var text = $(this).text();
     	
@@ -31,7 +31,7 @@ var redraw = function() {
         }
 	});
 
-    $(".water").each(function( index ) {
+    $(".water, .sponsor-border, .border, .about-border, .contact-border").each(function( index ) {
         if(!$(this).hasClass("location")) {
     	   var text = $(this).text();
     	
@@ -49,15 +49,42 @@ var redraw = function() {
 setInterval(redraw, 75);
 
 
-$('#apply').click(function(e) {
-        e.preventDefault(); 
-        
-        var pos = $(".world").position();
-        console.log(pos.left);
-        //$(".bottom-half").css('left', '-500px');
-        $(".bottom-half").animate({ top: 200  }, 'slow');
-        $(".middle-half").animate({ top: -200 }, 'slow');
+$('#title, .title-border').click(function(e) {
+        $(".bottom-half").animate({ top: 0  });
+        $(".middle-half").animate({ top: 0 }, 'easeOutBounce');
+        $(".middle-half").removeClass('shadow-bottom');
+        $(".middle-half").removeClass('shadow-top');
+        $(".top-half").animate({ top: 0  });
+    });
+
+$('#apply, .border').click(function(e) {
+        $(".bottom-half").animate({ top: 200  });
+        $(".bottom-half").addClass('shadow-top');
+        $(".middle-half").animate({ top: -200 });
+        $(".middle-half").addClass('shadow-bottom');
         $(".top-half").animate({ top: -200  }, 'slow');
-        /*your_code_here;*/ 
-        return false; 
+    });
+
+$('#sponsor, .sponsor-border').click(function(e) {
+        $(".bottom-half").animate({ top: 200  });
+        $(".bottom-half").addClass('shadow-top');
+        $(".middle-half").animate({ top: -200 });
+        $(".middle-half").addClass('shadow-bottom');
+        $(".top-half").animate({ top: -200  }, 'slow');
+    });
+
+$('#about, .about-border').click(function(e) {
+        $(".bottom-half").animate({ top: 200  }, 'slow');
+        $(".middle-half").animate({ top: 200 });
+        $(".middle-half").addClass('shadow-top');
+        $(".top-half").animate({ top: -200  });
+        $(".top-half").addClass('shadow-bottom');
+    });
+
+$('#contact, .contact-border').click(function(e) {
+        $(".bottom-half").animate({ top: 200  }, 'slow');
+        $(".middle-half").animate({ top: 200 });
+        $(".middle-half").addClass('shadow-top');
+        $(".top-half").animate({ top: -200  });
+        $(".top-half").addClass('shadow-bottom');
     });
