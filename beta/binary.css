@@ -90,3 +90,11 @@ html,body
 .middle-half {
     z-index: 1000;
 }
+
+.bottom-half {
+    margin-top: -1px;
+}
+
+.top-half {
+    margin-bottom: -1px;
+}
