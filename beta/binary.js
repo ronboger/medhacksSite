@@ -49,42 +49,35 @@ var redraw = function() {
 
 setInterval(redraw, 75);
 
+$('.info').css('width', $(window).width() * 0.85);
 
-$('#title, .title-border').click(function(e) {
-        $(".bottome-half").removeClass('shadow-top');
-        $('.apply-info').animate({ height: 0 });
-        $('.numbers').animate({ height: 0 });
+function removeStyles() {
         $('.numbers').removeClass('marginTen');
         $(".middle-half").removeClass('shadow-bottom');
         $(".middle-half").removeClass('shadow-top');
         $(".top-half").removeClass('shadow-bottom');
+        $(".bottome-half").removeClass('shadow-top');
+}
+
+$('#title, .title-border, .back').click(function(e) {
+        $('.info').animate({ height: 0 });
+        $('.numbers').animate({ height: 0 });
+        setTimeout(removeStyles, 350);
     });
 
 $('#apply, .border').click(function(e) {
-        //$(".bottom-half").animate({ top: 200  });
         $(".bottom-half").addClass('shadow-top');
-        //$('.apply-info').animate({ height: 200 });
-        $('.apply-info').animate({ height: $('.apply-content').outerHeight() });
-        $('.numbers').animate({ height: $('.apply-content').outerHeight() });
-        $('.numbers').addClass('marginTen');
-        //$(".middle-half").animate({ top: -200 });
+        $('#bottom-info').animate({ height: $('#apply-content').outerHeight() });
+        $('#bottom-numbers').animate({ height: $('#apply-content').height() });
+        $('#bottom-numbers').addClass('marginTen');
         $(".middle-half").addClass('shadow-bottom');
-        //$(".top-half").animate({ top: -200  });
-    });
-
-$('#sponsor, .sponsor-border').click(function(e) {
-        $(".bottom-half").animate({ top: 200  });
-        $(".bottom-half").addClass('shadow-top');
-        $(".middle-half").animate({ top: -200 });
-        $(".middle-half").addClass('shadow-bottom');
-        $(".top-half").animate({ top: -200  });
     });
 
 $('#about, .about-border').click(function(e) {
-        $(".bottom-half").animate({ top: 200  });
-        $(".middle-half").animate({ top: 200 });
         $(".middle-half").addClass('shadow-top');
-        $(".top-half").animate({ top: -200  });
+        $('#top-info').animate({ height: $('#about-content').outerHeight() });
+        $('#top-numbers').animate({ height: $('#about-content').outerHeight() });
+        $('#top-numbers').addClass('marginTen');
         $(".top-half").addClass('shadow-bottom');
     });
 

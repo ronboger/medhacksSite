@@ -50,16 +50,33 @@ html,body
     color: red;
 }
 
-.apply-info {
+.info {
     width: 630px;
     margin: auto;
-    color: white;
+    color: #DDD;
     height: 0px;
+    overflow: scroll;
+    font-size: 25px;
 }   
 
-.apply-content {
+.content {
     padding-top: 10px;
     padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.numbers {
+    position: relative;
+    float: left;
+    height: 0px;
+    color: gray;
+    overflow: scroll;
+    text-align: right;
+}
+
+.marginTen {
+    padding-top: 10px;
+    padding-right: 20px;
 }
 
 @media only screen and (max-width: 1000px) and (orientation: portrait) {
@@ -72,9 +89,18 @@ html,body
         top: calc(50% + 6px);
     }
 
-    .apply-info {
-        width: 910px;
-        font-size: 60px;
+    .info {
+        min-width: 910px;
+        font-size: 50px;
+    }
+    
+    .content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .marginTen {
+        padding-top: 52px;
     }
 }
 
@@ -83,7 +109,7 @@ html,body
         font-size: 25px;    
     }
 
-    .apply-info {
+    .info {
         width: 650px;
         font-size: 40px;
     }
@@ -121,21 +147,18 @@ html,body
     margin-bottom: -1px;
 }
 
-.numbers {
-    position: relative;
-    float: left;
-    height: 0px;
-    color: gray;
-}
-
-.marginTen {
-    margin-top: 10px;
-}
-
 .invisible {
     float: right;
 }
 
 .button {
     color: pink;
+}
+
+.btn-click {
+    color: black;
+}
+
+.back {
+    color: orange;
 }
