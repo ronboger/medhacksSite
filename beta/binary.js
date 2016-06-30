@@ -1,3 +1,4 @@
+
 String.prototype.replaceAt=function(index, character) {
     return this.substr(0, index) + character + this.substr(index+character.length);
 }
@@ -50,21 +51,25 @@ setInterval(redraw, 75);
 
 
 $('#title, .title-border').click(function(e) {
-        $(".bottom-half").animate({ top: 0  });
         $(".bottome-half").removeClass('shadow-top');
-        $(".middle-half").animate({ top: 0 }, 'easeOutBounce');
+        $('.apply-info').animate({ height: 0 });
+        $('.numbers').animate({ height: 0 });
+        $('.numbers').removeClass('marginTen');
         $(".middle-half").removeClass('shadow-bottom');
         $(".middle-half").removeClass('shadow-top');
-        $(".top-half").animate({ top: 0  });
         $(".top-half").removeClass('shadow-bottom');
     });
 
 $('#apply, .border').click(function(e) {
-        $(".bottom-half").animate({ top: 200  });
+        //$(".bottom-half").animate({ top: 200  });
         $(".bottom-half").addClass('shadow-top');
-        $(".middle-half").animate({ top: -200 });
+        //$('.apply-info').animate({ height: 200 });
+        $('.apply-info').animate({ height: $('.apply-content').outerHeight() });
+        $('.numbers').animate({ height: $('.apply-content').outerHeight() });
+        $('.numbers').addClass('marginTen');
+        //$(".middle-half").animate({ top: -200 });
         $(".middle-half").addClass('shadow-bottom');
-        $(".top-half").animate({ top: -200  }, 'slow');
+        //$(".top-half").animate({ top: -200  });
     });
 
 $('#sponsor, .sponsor-border').click(function(e) {
@@ -72,11 +77,11 @@ $('#sponsor, .sponsor-border').click(function(e) {
         $(".bottom-half").addClass('shadow-top');
         $(".middle-half").animate({ top: -200 });
         $(".middle-half").addClass('shadow-bottom');
-        $(".top-half").animate({ top: -200  }, 'slow');
+        $(".top-half").animate({ top: -200  });
     });
 
 $('#about, .about-border').click(function(e) {
-        $(".bottom-half").animate({ top: 200  }, 'slow');
+        $(".bottom-half").animate({ top: 200  });
         $(".middle-half").animate({ top: 200 });
         $(".middle-half").addClass('shadow-top');
         $(".top-half").animate({ top: -200  });
@@ -84,7 +89,7 @@ $('#about, .about-border').click(function(e) {
     });
 
 $('#contact, .contact-border').click(function(e) {
-        $(".bottom-half").animate({ top: 200  }, 'slow');
+        $(".bottom-half").animate({ top: 200  });
         $(".middle-half").animate({ top: 200 });
         $(".middle-half").addClass('shadow-top');
         $(".top-half").animate({ top: -200  });

@@ -50,6 +50,18 @@ html,body
     color: red;
 }
 
+.apply-info {
+    width: 630px;
+    margin: auto;
+    color: white;
+    height: 0px;
+}   
+
+.apply-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 @media only screen and (max-width: 1000px) and (orientation: portrait) {
     body{
         font-size: 40px;    
@@ -59,11 +71,21 @@ html,body
         left: calc(50% - 12px);
         top: calc(50% + 6px);
     }
+
+    .apply-info {
+        width: 910px;
+        font-size: 60px;
+    }
 }
 
 @media only screen and (max-width: 1000px) and (orientation: landscape) {
     body{
         font-size: 25px;    
+    }
+
+    .apply-info {
+        width: 650px;
+        font-size: 40px;
     }
 }
 
@@ -97,4 +119,23 @@ html,body
 
 .top-half {
     margin-bottom: -1px;
+}
+
+.numbers {
+    position: relative;
+    float: left;
+    height: 0px;
+    color: gray;
+}
+
+.marginTen {
+    margin-top: 10px;
+}
+
+.invisible {
+    float: right;
+}
+
+.button {
+    color: pink;
 }
