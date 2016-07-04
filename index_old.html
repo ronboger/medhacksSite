@@ -56,10 +56,10 @@
 
     <div class="section-apply" id="apply">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.0" id="ekg" class="section-apply-ekg" width="2000" height="104px" viewBox="0 0 2000 52">
-            <path d="M0 39h969.4776l2.798 -5.740l5.525 10.763l12.629 -48.956l13.705 71.031l12.315 -35.070l4.691 14.717l5.727 -13.101l3.655 5.925h969.477" stroke="white" fill="transparent" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M0 39 h969.4776 l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925 h969.477 " stroke="white" fill="transparent" stroke-width="3" stroke-linejoin="round"/>
         </svg>
-        <h2 class="section-apply-heading">Excited to <span id="thumper">disrupt</span> healthcare?</h2>
-        <a href="http://goo.gl/forms/IIniaFOjWABoxEIz1" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Apply - Banner']);" class="action-btn action-btn-light">Tell us you're interested!</a>
+        <!--h2 class="section-apply-heading">Excited to <span id="thumper">disrupt</span> healthcare?</h2>
+        <a href="http://goo.gl/forms/IIniaFOjWABoxEIz1" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Apply - Banner']);" class="action-btn action-btn-light">Tell us you're interested!</a-->
     </div>
 
     <div id="faq" class="faq">
@@ -502,11 +502,12 @@
                 ekg.setAttribute('viewBox', viewBox.join(' '));
 
                 var side = ((width - 61.045) / 2).toFixed(3);
+                var spacing = 200;
 
-                path.setAttribute('d', 'M0 39h' + side + 'l2.798 -5.740l5.525 10.763l12.629 -48.956l13.705 71.031l12.315 -35.070l4.691 14.717l5.727 -13.101l3.655 5.925h' + side);
+                path.setAttribute('d', 'M0 39 h' + spacing + ' l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925 h' + spacing + ' l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925 h' + spacing + ' l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925 h' + spacing + ' l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925 h' + spacing + ' l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925 h' + spacing + ' l2.798 -5.740 l5.525 10.763 l12.629 -48.956 l13.705 71.031 l12.315 -35.070 l4.691 14.717 l5.727 -13.101 l3.655 5.925');
 
                 totalLength = path.getTotalLength();
-                path.setAttribute('stroke-dasharray', (totalLength - 100).toFixed(3) + ' 100');
+                path.setAttribute('stroke-dasharray', (totalLength - 100).toFixed(3) + ' 50');
 
                 while(stylesheet.cssRules.length > 0) {
 
@@ -524,8 +525,8 @@
 
             resizeEkg();
 
-            path.style.webkitAnimation = 'ekg 5.7s ease-in infinite';
-            path.style.animation       = 'ekg 5.7s ease-in infinite';
+            path.style.webkitAnimation = 'ekg 10s infinite';
+            path.style.animation       = 'ekg 10s infinite';
 
             $(window).on('resize', function() {
 
