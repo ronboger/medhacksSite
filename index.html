@@ -20,6 +20,7 @@
         <ul class="header-navbar-items">
             <li class="header-navbar-item"><a href="#about" class="header-navbar-link">About</a></li>
             <li class="header-navbar-item"><a href="#faq" class="header-navbar-link">FAQ</a></li>
+            <li class="header-navbar-item"><a href="#sponsorbox" onclick="goSponsor()" class="header-navbar-link">Sponsor</a></li>
             <li class="header-navbar-item"><a href="#apply" class="header-navbar-link">Apply</a></li>
             <li class="header-navbar-item"><a href="mailto:info@medhacks.org" class="header-navbar-link">Contact</a></li>
         </ul>
@@ -37,7 +38,7 @@
 
             <div class="header-text-actions" id="submit">
                 <a href="https://medhacks.typeform.com/to/qQ8T9k" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Apply - Home']);" class="header-text-action">Apply</a>
-                <a id="sponsors" href="sponsors.pdf" class="header-text-action">Sponsors</a>
+                <a id="sponsors" href="#sponsorbox" onclick="goSponsor()" class="header-text-action">Sponsors</a>
             </div>
         </div>
         <div style="position: absolute; bottom: 5px; left: 20px;">
@@ -75,8 +76,8 @@
                 <h3>But I know nothing about health/coding?!</h3>
                 <p>If you don't know about health or engineering, don’t worry - learning is a huge part of the MedHacks experience! We will have workshops on all subjects and mentors to answer questions and help out teams. Come with an open mind, you'll work with a great team, learn a lot, and most importantly, have fun.</p>
             </div>
-			<div class="faq-box">
-				<h3>I'm interested in sponsoring. Where can I get more information?<h3>
+			<div class="faq-box" id="sponsorbox">
+				<h3>I'm interested in sponsoring. Where can I get more information?</h3>
 				<p>We have a number of <a href="./sponsors.pdf">sponsorship tiers available</a>. In addition, we have also created a <a href="./medhacks_brochure_2016.pdf">brochure</a> detailing the attendance data from 2015 and our vision for the future. If you have any other questions, we are open at <a href="mailto:sponsors@medhacks.org">sponsors@medhacks.org</a>.</p>
 			</div>
         </div>
@@ -90,13 +91,9 @@
                 <h3>I'm not a student, can I still get involved?</h3>
                 <p>Of course! We are looking for talented and qualified mentors, speakers, and <a href="mailto:sponsors@medhacks.org">sponsors</a> in tech, entrepreneurship, medicine, and their intersection. We're always looking for new people to get involved, so shoot us an email at <a href="mailto:info@medhacks.org">info@medhacks.org</a> and we'll be in touch.</p>
             </div>  
-            <div class="faq-box">
+            <div class="faq-box" id="sponsoring">
                 <h3>Who can participate?</h3>
-<<<<<<< HEAD
                 <p>Any student, anywhere. Anyone can make an impact - hackthons produce "hackers", not the other way around. Students - both at the undergraduate and graduate level - with engineering, medical, and entrepreneurial backgrounds are encouraged to apply for a spot at MedHacks 2016.</p>
-=======
-                <p>Any student, anywhere. Anyone can make an impact - hackathons produce "hackers", not the other way around. Students - both at the undergraduate and graduate level - with engineering, medical, and entrepreneurial backgrounds are encouraged to apply for a spot at MedHacks 2016.</p>
->>>>>>> 655f96a7ebb614454df5805ae4f86f209ba811b9
             </div>          
         </div>
 
@@ -107,9 +104,19 @@
     <div id="apply" class="filler" style="height: calc(100% - 100px);width: 100%"></div>
     
     <script src="/assets/js/jquery.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.shadow-animation/1/mainfile"></script>
+    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
     <script>    
     $('#subtitle').hide();
     //$('#sponsors').hide();
+
+    function goSponsor() {
+         setTimeout(function() {
+              $('#sponsorbox').animate({boxShadow : "0 0 24px 1px #193d56"}, 1000, function() {
+                   $('#sponsorbox').animate({boxShadow : "0 0 6px 1px rgba(0, 0, 0, 0.05)"}, 1000);
+              });
+         }, 500); 
+    }
 
     $(window).scroll(function() {
         if($(document).scrollTop() < ($(document).height() - $(window).height())/2) {
@@ -219,7 +226,6 @@
         });
 
         $('.header-navbar-logo').click(function() {
-
             $('html,body').animate({scrollTop: 0}, 500);
             $('html').removeClass('nav-open');
         });
@@ -238,8 +244,11 @@
         });
 
         if(isMobile()) {
-
-            $('.header-navbar').addClass('header-navbar-scrolled');
+                                                                                                            
+            //$('.header-navbar').addClass('header-navbar-scrolled');
+            $('.header-navbar-logo').css('margin', 10);                                                                                                
+            $('.header-navbar-hamburger').css('margin', 10);  
+            $('.header-navbar').css('height', 70);                                                                                               
         }
     });
     </script>
