@@ -20,7 +20,7 @@
         <ul class="header-navbar-items">
             <li class="header-navbar-item"><a href="#about" class="header-navbar-link">About</a></li>
             <li class="header-navbar-item"><a href="#faq" class="header-navbar-link">FAQ</a></li>
-            <li class="header-navbar-item"><a href="#sponsorbox" onclick="goSponsor()" class="header-navbar-link">Sponsor</a></li>
+            <li class="header-navbar-item"><a href="#fakebox" onclick="goSponsor()" class="header-navbar-link">Sponsor</a></li>
             <li class="header-navbar-item"><a href="#apply" class="header-navbar-link">Apply</a></li>
             <li class="header-navbar-item"><a href="mailto:info@medhacks.org" class="header-navbar-link">Contact</a></li>
         </ul>
@@ -39,7 +39,7 @@
             <div class="header-text-actions" id="submit">
                 <a href="https://medhacks.typeform.com/to/qQ8T9k" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Apply - Home']);" class="header-text-action">Apply</a>
                 <!--<a href="https://www.youtube.com/watch?v=9UIHzDDzLJA" id="youtuberon" onclick="_gaq.push(['_trackEvent', 'link', 'outbound’, 'Apply - Home']);" class="header-text-action">Still not convinced...</a> -->
-                <a id="sponsors" href="#sponsorbox" onclick="goSponsor()" class="header-text-action">Sponsors</a>
+                <a id="sponsors" href="#fakebox" onclick="goSponsor()" class="header-text-action">Sponsors</a>
             </div>
         </div>
         <div style="position: absolute; bottom: 5px; left: 20px;">
@@ -63,8 +63,7 @@
                 </div>
             </div>
         </div>
-            <hr class="small" style="border-top: 1px solid #193d56;margin-top: 20px;margin-bottom: -10px;max-width: 90%;">
-
+        <hr class="small" style="border-top: 1px solid #193d56;margin-top: 20px;margin-bottom: -10px;max-width: 90%;">
     </div>
 
     <div id="faq" class="faq">
@@ -87,11 +86,10 @@
                 <h3>But I know nothing about health/coding?!</h3>
                 <p>If you don't know about health or engineering, don’t worry - learning is a huge part of the MedHacks experience! We will have workshops on all subjects and mentors to answer questions and help out teams. Come with an open mind, you'll work with a great team, learn a lot, and most importantly, have fun.</p>
             </div>
-
-			<div class="faq-box" id="sponsorbox">
-				<h3>I'm interested in sponsoring. Where can I get more information?</h3>
-				<p>We have a number of <a href="./sponsors.pdf">sponsorship tiers available</a>. In addition, we have also created a <a href="./medhacks_brochure_2016.pdf">brochure</a> detailing the attendance data from 2015 and our vision for the future. If you have any other questions, we are open at <a href="mailto:sponsors@medhacks.org">sponsors@medhacks.org</a>.</p>
-			</div>
+            <div class="faq-box">
+                <h3>Where will I sleep?</h3>
+                <p>For those coming in from out of town, we recommend you bring a sleeping bag and basic toiletries. If hotels sound better than a floor, the Doubletree Colonnade is a two-minute walk. Other hotels in the Inner Harbor area are reachable by cab. </p>
+            </div>
         </div>
 
         <div class="faq-column">
@@ -116,15 +114,57 @@
                 <p>MedHacks is able to offer a limited number of travel grants for participants coming from outside the Baltimore Metropolitan area. If you are in need of assistance in attending MedHacks, and live outside the Baltimore area, please send an email to <a href="mailto:travel@medhacks.org">travel@medhacks.org</a>. </p>
             </div> 
             <div class="faq-box">
-                <h3>Where will I sleep?</h3>
-                <p>For those coming in from out of town, we recommend you bring a sleeping bag and basic toiletries. If hotels sound better than a floor, the Doubletree Colonnade is a two-minute walk. Other hotels in the Inner Harbor area are reachable by cab. </p>
-            </div>
-            <div class="faq-box">
                 <h3>What if I have more questions?</h3>
                 <p>We're always open at <a href="mailto:info@medhacks.org">info@medhacks.org</a>. Send us an email, and we'll help you out :)</p>
             </div>
+            <div class="faq-box" id="fakebox" style='opacity: 0; position: absolute;'>
+            </div>
+            <div class="faq-box" id="sponsorbox">
+                <h3>I'm interested in sponsoring. Where can I get more information?</h3>
+                <p>We have a number of <a href="./sponsors.pdf">sponsorship tiers available</a>. In addition, we have also created a <a href="./medhacks_brochure_2016.pdf">brochure</a> detailing the attendance data from 2015 and our vision for the future. If you have any other questions, we are open at <a href="mailto:sponsors@medhacks.org">sponsors@medhacks.org</a>.</p>
+            </div>
         </div>
     </div>
+
+    <div id="sponsor-section" class="sponsor-section" style='text-align: center'>
+        <hr class="small" style="border-top: 1px solid #193d56;margin-top: 20px;margin-bottom: -10px;max-width: 90%;">
+
+        <div class="sponsors-list">
+            <h2 class="sponsor-heading">Last Year's Sponsors</h2>
+            <a href="http://500.co/" class="sponsor sponsor-500startups" target="_blank"><img src="assets/img/sponsors/500.png" alt="500 Startups"></a>
+            <a href="http://athenahealth.com/" class="sponsor sponsor-athena" target="_blank"><img src="assets/img/sponsors/athena.png" alt="Athena"></a>
+            <a href="http://www.kpcbfellows.com" class="sponsor sponsor-kpcb" target="_blank"><img src="assets/img/sponsors/kpcb-fellows.png" alt="KPCB"></a>
+            <a href="http://google.com/" class="sponsor sponsor-google" target="_blank"><img src="assets/img/sponsors/goog.png" class="sponsor-google" alt="Google"></a>
+            <a href="http://www.nebulab.io" class="sponsor sponsor-nebulab" target="_blank"><img src="assets/img/sponsors/nebulab.png" alt="Nebulab"></a>
+            <a href="http://alumni.jhu.edu/" class="sponsor sponsor-alumni" target="_blank"><img src="assets/img/sponsors/alumni.png" alt="JHU Alumni"></a>
+            <a href="http://leapmotion.com/" class="sponsor sponsor-leap" target="_blank"><img src="assets/img/sponsors/leap.png" alt="Leap"></a>
+            <a href="http://www.osvr.com" class="sponsor sponsor-osvr" target="_blank"><img src="assets/img/sponsors/osvr.jpg" alt="OSVR"></a>
+            <a href="http://www.biohealthinnovation.org/" class="sponsor sponsor-bhi" target="_blank"><img src="assets/img/sponsors/bhi.png" alt="BHI"></a>
+            <a href="http://www.redprivet.com" class="sponsor sponsor-redprivet" target="_blank"><img src="assets/img/sponsors/redprivet.jpg" alt="Red Privet"></a>
+
+            <a href="https://www.thalmic.com/" class="sponsor sponsor-thalmic" target="_blank"><img src="assets/img/sponsors/thalmic.jpg" alt="Thalmic"></a>
+            <a href="http://www.manahealth.com/" class="sponsor sponsor-mana" target="_blank"><img src="assets/img/sponsors/mana.png" alt="Mana Health"></a>
+            <a href="http://thehealthcarealliance.com/" class="sponsor sponsor-healthcare-alliance" target="_blank"><img src="assets/img/sponsors/healthcare-alliance.png" alt="Healthcare Alliance"></a>
+            <a href="http://namecheap.com/" class="sponsor sponsor-namecheap" target="_blank"><img src="assets/img/sponsors/namecheap.png" alt="Namecheap"></a>
+            <a href="http://iamsogal.com/" class="sponsor sponsor-sogal" target="_blank"><img src="assets/img/sponsors/sogal.png" alt="SoGal"></a>
+            <a href="http://pebble.com/" class="sponsor sponsor-pebble" target="_blank"><img src="assets/img/sponsors/pebble.png" alt="Pebble"></a>
+
+        </div>
+        <div class="partners-list">
+            <h2 class="partners-heading">Last Year's Partners</h2>
+            <a href="http://ifjh.org/" class="sponsor sponsor-if" target="_blank"><img src="assets/img/sponsors/innovation-factory.png" alt="Innovation Factory"></a>
+            <a href="http://www.neurodata.io" class="sponsor sponsor-ocp" target="_blank"><img src="assets/img/sponsors/ocp.png" alt="Open Connectome Project"></a>
+            <a href="http://www.bme.jhu.edu/" class="sponsor sponsor-jhubme" target="_blank"><img src="assets/img/sponsors/jhu-bme.png" alt="Johns Hopkins University Biomedical Engineering"></a>
+            <a href="http://jhumhealth.org/" class="sponsor sponsor-gmi" target="_blank"><img src="assets/img/sponsors/GMI.png" alt="GMI"></a>       
+            <a href="http://ventures.jhu.edu/" class="sponsor sponsor-jhtv" target="_blank"><img src="assets/img/sponsors/jhtv.png" alt="Johns Hopkins Tech Ventures"></a>
+            <a href="http://www.alevelcapital.com" class="sponsor sponsor-alevel" target="_blank"><img src="assets/img/sponsors/alevel.png" alt="A-Level Capital"></a>
+            <a href="http://www.icm.jhu.edu/" class="sponsor sponsor-icm" target="_blank"><img src="assets/img/sponsors/ICM.png" alt="ICM"></a>
+            <a href="http://hmdn.johnshopkins.edu/index.html" class="sponsor sponsor-hmdn" target="_blank"><img src="assets/img/sponsors/hmdn.png" alt="Hopkins Medical Devices Network"></a>
+            <a href="http://hackingedu.co/" class="sponsor sponsor-hackingedu" target="_blank"><img src="assets/img/sponsors/hackingedu.png" alt="Hacking EDU"></a>
+            <a href="http://jhsph.edu/" class="sponsor sponsor-sph" target="_blank"><img src="assets/img/sponsors/sph.png" alt="School of Public Health"></a>
+        </div>
+    </div>
+
 
     <div class="filler" style="height: 100px;width: 100%"></div>
     <div id="apply" class="filler" style="height: calc(100% - 100px);width: 100%"></div>
@@ -135,6 +175,8 @@
     <script>    
     $('#subtitle').hide();
     $('#youtuberon').hide();
+
+    $('#fakebox').css('top', ($('#sponsorbox').position().top - 100) + 'px');
     //$('#sponsors').hide();
 
     function goSponsor() {

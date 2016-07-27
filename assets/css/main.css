@@ -667,8 +667,18 @@ hr.small {
     background-color: #efefef;
     padding: 48px 12%;
     padding-top: 0px;
+    margin-top: -1px;
     position: relative;
 }
+
+.sponsor-section {
+    background-color: #efefef;
+    width: 100%;
+    margin-top: -50px;
+    padding-bottom: 20px; 
+    position: relative;
+}
+
 
 .schedule {
     background-color: #193d56;
