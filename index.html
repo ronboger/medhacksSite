@@ -14,6 +14,8 @@
 </head>
 <body id="page-top">
     <div class="header-navbar ">
+        <a id="mlh-trust-badge" style="display:block;max-width:100px;position: absolute; left: 20px;min-width:60px;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+        <div class='filler-div' style="position: relative;width: 95px; height: 100%; float: left;"></div>
         <h1 class="header-navbar-logo">MedHacks</h1>
 
         <div class="header-navbar-hamburger"></div>
@@ -55,6 +57,7 @@
     <div class="filler" style="height: 100%;width: 100%"></div>
 
     <div id="about" class="about">
+        <h2>About Us</h2>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -67,6 +70,7 @@
     </div>
 
     <div id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-column">
 			<div class="faq-box">
                 <h3>What is a hackathon?</h3>  
@@ -128,9 +132,9 @@
 
     <div id="sponsor-section" class="sponsor-section" style='text-align: center'>
         <hr class="small" style="border-top: 1px solid #193d56;margin-top: 20px;margin-bottom: -10px;max-width: 90%;">
-
-        <div class="sponsors-list">
-            <h2 class="sponsor-heading">Last Year's Sponsors</h2>
+        <h2 class="sponsor-heading" style="position: relative;margin-bottom: 20px;">Last Year's Event</h2>
+        <div class="faq-column" style="width: 49%; border-right: 2px #193d56 solid;">
+            <h3>Sponsors</h3>
             <a href="http://500.co/" class="sponsor sponsor-500startups" target="_blank"><img src="assets/img/sponsors/500.png" alt="500 Startups"></a>
             <a href="http://athenahealth.com/" class="sponsor sponsor-athena" target="_blank"><img src="assets/img/sponsors/athena.png" alt="Athena"></a>
             <a href="http://www.kpcbfellows.com" class="sponsor sponsor-kpcb" target="_blank"><img src="assets/img/sponsors/kpcb-fellows.png" alt="KPCB"></a>
@@ -148,10 +152,9 @@
             <a href="http://namecheap.com/" class="sponsor sponsor-namecheap" target="_blank"><img src="assets/img/sponsors/namecheap.png" alt="Namecheap"></a>
             <a href="http://iamsogal.com/" class="sponsor sponsor-sogal" target="_blank"><img src="assets/img/sponsors/sogal.png" alt="SoGal"></a>
             <a href="http://pebble.com/" class="sponsor sponsor-pebble" target="_blank"><img src="assets/img/sponsors/pebble.png" alt="Pebble"></a>
-
         </div>
-        <div class="partners-list">
-            <h2 class="partners-heading">Last Year's Partners</h2>
+        <div class="faq-column" style='margin-left: -1%;'>
+            <h3>Partners</h3>
             <a href="http://ifjh.org/" class="sponsor sponsor-if" target="_blank"><img src="assets/img/sponsors/innovation-factory.png" alt="Innovation Factory"></a>
             <a href="http://www.neurodata.io" class="sponsor sponsor-ocp" target="_blank"><img src="assets/img/sponsors/ocp.png" alt="Open Connectome Project"></a>
             <a href="http://www.bme.jhu.edu/" class="sponsor sponsor-jhubme" target="_blank"><img src="assets/img/sponsors/jhu-bme.png" alt="Johns Hopkins University Biomedical Engineering"></a>
@@ -197,6 +200,13 @@
               });
          }, 500); 
     }
+
+    $( window ).resize(function() {
+        if($(window).width() < 1040) {
+            $('.filler-div').remove();
+            $('#mlh-trust-badge').remove();
+        }
+    });
 
     $(window).scroll(function() {
         if($(document).scrollTop() < ($(document).height() - $(window).height())/2) {
@@ -262,6 +272,11 @@
                 var running = false,
                     $header = $('.header-navbar');
 
+                if($(window).width() < 1040) {
+                    $('.filler-div').remove();
+                    $('#mlh-trust-badge').remove();
+                }
+
                 function updateHeaderScroll() {
 
                   if(running) {
@@ -280,7 +295,8 @@
 
                 updateHeaderScroll();
 
-                $(window).scroll(updateHeaderScroll);
+                $(window).scroll(updateHeaderScroll); 
+
               });
 
             })(window, window.document);
@@ -335,6 +351,8 @@
             $('.header-text-byline-caption').css('margin', 5); 
             $('.header-text-headline').css('margin-bottom', 0); 
 
+            $('.filler-div').remove();
+            $('#mlh-trust-badge').remove();
         }
     });
     </script>

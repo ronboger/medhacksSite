@@ -588,6 +588,7 @@ hr.small {
 .about {
     background-color: #efefef;
     padding: 30px 0;    
+    padding-top: 5px;
     position: relative;
 }
 
@@ -667,7 +668,7 @@ hr.small {
     background-color: #efefef;
     padding: 48px 12%;
     padding-top: 0px;
-    margin-top: -1px;
+    margin-top: -20px;
     position: relative;
 }
 
@@ -677,6 +678,7 @@ hr.small {
     margin-top: -50px;
     padding-bottom: 20px; 
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -779,8 +781,16 @@ hr.small {
 .partners-heading,
 .collaborators-heading {
     /*font-family: 'Helvetica Neue';*/
-    font-size: 28px;
     margin: 40px 0 10px;
+}
+
+h2 {
+    color: #193d56;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0px;
 }
 
 .sponsors-list {
