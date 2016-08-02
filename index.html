@@ -137,7 +137,7 @@
     <div id="sponsor-section" class="sponsor-section" style='text-align: center'>
         <hr class="small" style="border-top: 1px solid #193d56;margin-top: 20px;margin-bottom: -10px;max-width: 90%;">
         <h2 class="sponsor-heading" style="position: relative;margin-bottom: 20px;">Last Year's Event</h2>
-        <div class="faq-column" style="width: 49%; border-right: 2px #193d56 solid;">
+        <div class="faq-column column-border-right" id='sponsor-column'>
             <h3>Sponsors</h3>
             <a href="http://500.co/" class="sponsor sponsor-500startups" target="_blank"><img src="assets/img/sponsors/500.png" alt="500 Startups"></a>
             <a href="http://athenahealth.com/" class="sponsor sponsor-athena" target="_blank"><img src="assets/img/sponsors/athena.png" alt="Athena"></a>
@@ -209,6 +209,7 @@
         if($(window).width() < 1040) {
             $('.filler-div').remove();
             $('#mlh-trust-badge').remove();
+            $('#sponsor-column').removeClass('column-border-right');
         }
     });
 
@@ -357,6 +358,7 @@
 
             $('.filler-div').remove();
             $('#mlh-trust-badge').remove();
+            $('#sponsor-column').removeClass('column-border-right');
         }
     });
     </script>
