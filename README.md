@@ -1,3 +1,7 @@
+# THIS REPO HAS MIGRATED - find the current site in the medhacks/SplashPage2016 repo!
+
+-------------
+
 # MedHacks main website
 
 At MedHacks 2015, the student-run medical hackathon at Johns Hopkins University, today’s brightest minds are being empowered to design tomorrow’s greatest innovations. We're selecting the top young technologists, scientists, and engineers from around the country, and giving them 36 hours to confront the most universal human challenge: health. Against the backdrop of one of the world’s leaders in medical innovation - Johns Hopkins University - hackers across all disciplines will unite in Baltimore, meet with experts in every part of the medical field, and develop their solutions to complex healthcare problems. At the end of the weekend-long event, teams will have the opportunity to present their projects. Winners will be chosen by a distinguished board of judges.
