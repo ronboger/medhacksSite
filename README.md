@@ -1,4 +1,4 @@
-# THIS REPO HAS MIGRATED - find the current site in the medhacks/SplashPage2016 repo!
+# THIS REPO HAS MIGRATED - find the current site in the medhacks/SplashPage2k16 repo!
 
 -------------
 
